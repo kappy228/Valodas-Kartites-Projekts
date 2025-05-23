@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valodas kartītes</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #2c3e50; }
+    input, button { margin: 5px; padding: 5px; }
+    .word-card { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+    .delete-btn { background-color: red; color: white; border: none; padding: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Valodas kartītes</h1>
+  <input type="text" id="original" placeholder="Vārds (piem. house)">
+  <input type="text" id="translation" placeholder="Tulk.">
+  <button onclick="addCard()">Pievienot</button>
+
+  <div id="cardList"></div>
+
+  <script>
+    let cards = JSON.parse(localStorage.getItem('cards')) || [];
+
+    function renderCards() {
+      const list = document.getElementById('cardList');
+      list.innerHTML = '';
+      cards.forEach((card, index) => {
+        const div = document.createElement('div');
+        div.className = 'word-card';
+        div.innerHTML = `<strong>${card.original}</strong> - ${card.translation} <button class="delete-btn" onclick="deleteCard(${index})">Dzēst</button>`;
+        list.appendChild(div);
+      });
+    }
+
+    function addCard() {
+      const original = document.getElementById('original').value.trim();
+      const translation = document.getElementById('translation').value.trim();
+      if (!original || !translation) return;
+      cards.push({ original, translation });
+      localStorage.setItem('cards', JSON.stringify(cards));
+      document.getElementById('original').value = '';
+      document.getElementById('translation').value = '';
+      renderCards();
+    }
+
+    function deleteCard(index) {
+      cards.splice(index, 1);
+      localStorage.setItem('cards', JSON.stringify(cards));
+      renderCards();
+    }
+
+    renderCards();
+  </script>
+</body>
+</html>
