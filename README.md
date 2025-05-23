@@ -16,15 +16,15 @@ Atrisināt lokālu problēmu – kā ērti un vienkārši saglabāt un atkārtot
 
 ## 🧪 Testēšana
 
-Projekts ir testēts ar dažādām funkcijām – pievienošanu, dzēšanu, datu saglabāšanu. Skatīt `Testesanas_tabula.xlsx` failu.
+Projekts ir testēts ar dažādām funkcijām – pievienošanu, dzēšanu, datu saglabāšanu. Skatīt `Testesanas_tabula.pdf` failu.
 
 ## 📄 Lietotāja ceļvedis
 
-Atrodams failā `Lietotaja_celvedis_Valodas_Kartites.docx`, kas satur lietošanas instrukcijas galalietotājam.
+Atrodams failā `Lietotaja_celvedis_Valodas_Kartites.pdf`, kas satur lietošanas instrukcijas galalietotājam.
 
 ## 🚀 Kā izmantot
 
-1. Atver `index.html` failu pārlūkprogrammā.
+1. Atver `Valodas Kartites Projekts.html` failu pārlūkprogrammā.
 2. Ievadi vārdu un tā tulkojumu.
 3. Lieto digitālās kartītes!
 
@@ -34,5 +34,5 @@ Atrodams failā `Lietotaja_celvedis_Valodas_Kartites.docx`, kas satur lietošana
 - Iespējots JavaScript
 
 ## 📂 Autors
-
+Antons Čerņavskis 11 klase
 Izstrādāts kā mācību projekts programmēšanas uzdevumam.
